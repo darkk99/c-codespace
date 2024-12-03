@@ -2,7 +2,7 @@
 	"name": "C++",
 	"build": {
 		"dockerfile": "Dockerfile",
-		"context": "..",
+		"context": ".."
 	},
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
@@ -11,21 +11,19 @@
 	],
 	// Settings to be applied to Visual Studio Code.
 	"settings": {
-		"cmake.sourceDirectory": "${workspaceFolder}/src",
+		"workbench.colorTheme": "Catppuccin Mocha",
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"files.associations": {
-			"zengithub.h": "c"
-		},
-		"C_Cpp.default.includePath": [
-			"~/.conan/data/**",
-			"${default}"
-		],
-		"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+		// catppuccin says to use these ¯\_(ツ)_/¯
+		"editor.semanticHighlighting.enabled": true,
+		"terminal.integrated.minimumContrastRatio": 1,
+		"window.titleBarStyle": "custom"
 	},
 	// Visual Studio Code extensions (plugins) to be installed.
 	"extensions": [
 		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools"
+		"ms-vscode.cmake-tools",
+		"vscodevim.vim",
+		"Catppuccin.catppuccin-vsc"
 	],
 	// Command to be executed after the container is created.
 	"postCreateCommand": ".devcontainer/post-create.sh"
